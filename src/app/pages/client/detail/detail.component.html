@@ -1,0 +1,24 @@
+<div class="container my-5 p-5 bg-white rounded-lg shadow-lg">
+  <div class="row" *ngIf="product">
+    <div class="col-md-6 p-4 text-center">
+      <img src="{{ product.image }}" alt="Product Image" class="rounded-lg shadow-md img-fluid w-50 shadow" />
+    </div>
+    <div class="col-md-6 p-4">
+      <h2 class="display-5 font-weight-bold mb-4 fw-bold">
+        {{ product.name }}
+      </h2>
+      <div class="d-flex align-items-center gap-2">Đánh giá: <app-rating [rating]="+product.rate"></app-rating></div>
+      <p class="h3 mb-2 text-danger">
+        Giá tiền:{{ formatCurrency(product.price) }}
+      </p>
+      <p class="fs-5 text-muted mb-2 text-decoration-line-through">
+        Giảm giá: <i>{{ formatCurrency(product.discount) }}</i>
+      </p>
+      <p class="fs-5 text-muted mb-2">Số lượng: {{ product.quantity }}</p>
+      <p class="fs-5 text-muted mb-4">Mô tả: {{ product.desc }}</p>
+      <button class="btn btn-primary" (click)="addToCart()">
+        Thêm giỏ hàng
+      </button>
+    </div>
+  </div>
+</div>

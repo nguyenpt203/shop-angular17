@@ -1,0 +1,55 @@
+<div class="container py-5">
+  <h1 class="text-center mb-5">Your Shopping Cart</h1>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card mb-3" *ngFor="let item of items; let i = index">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img [src]="item.product.image" alt="Product Image" class="img-fluid rounded-start" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.product.name }}</h5>
+              <p class="card-text">{{ item.product.desc }}</p>
+              <p class="card-text">
+                <strong class="text-danger">Giá tiền: {{ formatCurrency(item.product.price) }}</strong>
+              </p>
+
+              <div class="d-flex align-items-center">
+                <button class="btn btn-outline-secondary btn-sm me-2" (click)="decreaseQuantity(i)">
+                  -
+                </button>
+                <span>{{ item.quantity }}</span>
+                <button class="btn btn-outline-secondary btn-sm ms-2" (click)="increaseQuantity(i)">
+                  +
+                </button>
+              </div>
+              <button class="btn btn-link text-danger mt-3" (click)="removeItem(item.id)">
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Thanh toán</h5>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Số lượng
+              <span class="badge bg-primary">{{ items.length }}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Thành tiền: <span class="fw-bold text-danger">{{ formatCurrency(getTotalCost()) }}</span>
+            </li>
+          </ul>
+          <button class="btn btn-primary btn-lg mt-3 w-100" (click)="clearCart()">
+            Thanh toán
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,135 @@
+{
+  "products": [
+    {
+      "name": "Quần jean nữ 1",
+      "image": "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2023/Ao_thun_oversize_84RISING_Mickey_Mouse_-_Denz9.jpg",
+      "quantity": 30,
+      "price": 299999,
+      "discount": 12000,
+      "rate": 3.4,
+      "desc": "Quần jean nữ đẹp và phong cách, đi kèm với nhiều loại trang phục khác nhau.",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Giày thể thao unisex",
+      "price": 399999,
+      "quantity": 20,
+      "discount": 12000,
+      "rate": 1,
+      "image": "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2023/Ao_thun_oversize_84RISING_Mickey_Mouse_-_Denz9.jpg",
+      "desc": "Giày thể thao unisex vừa vặn và thoải mái, phù hợp cho mọi hoạt động thể chất."
+    },
+    {
+      "name": "Túi xách nữ",
+      "image": "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2023/Ao_thun_oversize_84RISING_Mickey_Mouse_-_Denz9.jpg",
+      "quantity": 40,
+      "price": 259999,
+      "discount": 1200,
+      "rate": 3,
+      "desc": "Túi xách nữ tiện dụng và thời trang, phù hợp cho mọi dịp từ đi làm đến dạo phố.",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Đồng hồ nam",
+      "price": 799999,
+      "quantity": 15,
+      "discount": 1200,
+      "rate": 4.5,
+      "image": "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2023/Ao_thun_oversize_84RISING_Mickey_Mouse_-_Denz9.jpg",
+      "desc": "Đồng hồ nam sang trọng và lịch lãm, là điểm nhấn cho phong cách thời trang của bạn."
+    },
+    {
+      "id": 6,
+      "name": "Áo sơ mi nữ",
+      "price": 199999,
+      "quantity": 35,
+      "discount": 1200,
+      "rate": 3.2,
+      "image": "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2023/Ao_thun_oversize_84RISING_Mickey_Mouse_-_Denz9.jpg",
+      "desc": "Áo sơ mi nữ thanh lịch và trẻ trung, phù hợp cho các buổi gặp gỡ công việc hoặc hẹn hò."
+    },
+    {
+      "id": 7,
+      "name": "Quần jogger nam",
+      "price": 349999,
+      "quantity": 25,
+      "discount": 15000,
+      "rate": 1.5,
+      "image": "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2023/Ao_thun_oversize_84RISING_Mickey_Mouse_-_Denz9.jpg",
+      "desc": "Quần jogger nam thoải mái và cá tính, phù hợp cho mọi hoạt động từ thể thao đến đi chơi."
+    },
+    {
+      "id": 8,
+      "name": "Áo khoác đông unisex",
+      "price": 497799,
+      "quantity": 10,
+      "discount": 1000,
+      "rate": 2,
+      "image": "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2023/Ao_thun_oversize_84RISING_Mickey_Mouse_-_Denz9.jpg",
+      "desc": "Áo khoác đông unisex ấm áp và thời trang, là lựa chọn hoàn hảo cho mùa đông."
+    },
+    {
+      "id": 9,
+      "name": "Balo học sinh",
+      "price": 227799,
+      "quantity": 3000,
+      "discount": 20,
+      "rate": 2.8,
+      "image": "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2023/Ao_thun_oversize_84RISING_Mickey_Mouse_-_Denz9.jpg",
+      "desc": "Balo học sinh tiện dụng và nhẹ nhàng, giúp bạn mang theo mọi thứ một cách dễ dàng."
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$klzwygzhaUhjIrcmXN72TOqIlk8lNzAhhtfFnwKpg/fSPUnYyI4X2",
+      "role": "admin",
+      "id": 4
+    },
+    {
+      "email": "admin1@gmail.com",
+      "password": "$2a$10$klzwygzhaUhjIrcmXN72TOqIlk8lNzAhhtfFnwKpg/fSPUnYyI4X2",
+      "role": "admin",
+      "id": 12
+    },
+    {
+      "email": "admin123@gmail.com",
+      "password": "$2a$10$DTqRfwkgqq97zR.hAA4DDehQQO094u4boPlNnMl0hwqDaAFAMZeD2",
+      "role": "client",
+      "id": 5
+    },
+    {
+      "email": "phamhaidang190123@gmail.com",
+      "password": "$2a$10$sh4zLDO4NFO5hdvGAbpE4O4gYu53FneGzIJlqXeae3CyiZMmypHo6",
+      "confirmPassword": "123456",
+      "role": "client",
+      "id": 14
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "$2a$10$1N057HNQZdJY1YVpH3lBSuETFpGaaVBXqOvjoH3nbBMsCZmvPrO8G",
+      "confirmPassword": "123456",
+      "role": "client",
+      "id": 15
+    }
+  ],
+  "cart": [
+    {
+      "productId": 2,
+      "quantity": 6,
+      "id": 1
+    },
+    {
+      "productId": 3,
+      "quantity": 3,
+      "id": 2
+    },
+    {
+      "productId": 5,
+      "quantity": 4,
+      "id": 3
+    }
+  ]
+}

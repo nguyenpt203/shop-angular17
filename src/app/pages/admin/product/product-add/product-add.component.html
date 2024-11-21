@@ -1,0 +1,174 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div
+          class="card shadow-2-strong card-registration"
+          style="border-radius: 15px"
+        >
+          <div class="card-body p-4 p-md-5">
+            <h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Thêm sản phẩm</h2>
+            <form (ngSubmit)="handleSubmit()" [formGroup]="productForm">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <label class="form-label" for="name">Tên sản phẩm</label>
+                  <div data-mdb-input-init class="form-outline">
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-control form-control-lg"
+                      placeholder="Nhập tên sản phẩm..."
+                      formControlName="name"
+                    />
+                    <div
+                      class="text-danger"
+                      *ngIf="
+                        !productForm.get('name')?.valid &&
+                        productForm.get('name')?.touched
+                      "
+                    >
+                      {{ getErrorMessage("name") }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="image">Ảnh sản phẩm</label>
+                    <input
+                      type="text"
+                      id="image"
+                      class="form-control form-control-lg"
+                      placeholder="Nhập ảnh"
+                      formControlName="image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="quantity">Số lượng</label>
+                    <input
+                      type="text"
+                      id="quantity"
+                      class="form-control form-control-lg"
+                      placeholder="Nhập số lượng..."
+                      formControlName="quantity"
+                    />
+                  </div>
+                  <div
+                    class="text-danger"
+                    *ngIf="
+                      !productForm.get('quantity')?.valid &&
+                      productForm.get('quantity')?.touched
+                    "
+                  >
+                    {{ getErrorMessage("quantity") }}
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="price">Giá sản phẩm</label>
+                    <input
+                      type="text"
+                      id="price"
+                      class="form-control form-control-lg"
+                      placeholder="Nhập giá..."
+                      formControlName="price"
+                    />
+                  </div>
+                  <div
+                    class="text-danger"
+                    *ngIf="
+                      !productForm.get('price')?.valid &&
+                      productForm.get('price')?.touched
+                    "
+                  >
+                    {{ getErrorMessage("price") }}
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="discount">Giảm giá</label>
+                    <input
+                      type="text"
+                      id="discount"
+                      class="form-control form-control-lg"
+                      placeholder="Nhập giá sale (nếu có)..."
+                      formControlName="discount"
+                    />
+                  </div>
+                  <div
+                    class="text-danger"
+                    *ngIf="
+                      !productForm.get('discount')?.valid &&
+                      productForm.get('discount')?.touched
+                    "
+                  >
+                    {{ getErrorMessage("discount") }}
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div data-mdb-input-init class="form-outline">
+                    <label class="form-label" for="rate">Đánh giá</label>
+                    <input
+                      type="number"
+                      id="rate"
+                      class="form-control form-control-lg"
+                      placeholder="Nhập giá sale (nếu có)..."
+                      formControlName="rate"
+                    />
+                  </div>
+                  <div
+                    class="text-danger"
+                    *ngIf="
+                      !productForm.get('rate')?.valid &&
+                      productForm.get('rate')?.touched
+                    "
+                  >
+                  {{ getErrorMessage("rate") }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <label class="form-label" for="desc">Mô tả</label>
+                <textarea
+                  class="form-control"
+                  id="desc"
+                  rows="5"
+                  placeholder="Nhập mô tả của bạn ở đây..."
+                  formControlName="desc"
+                ></textarea>
+                <div
+                  class="text-danger"
+                  *ngIf="
+                    !productForm.get('desc')?.valid &&
+                    productForm.get('desc')?.touched
+                  "
+                >
+                  {{ getErrorMessage("desc") }}
+                </div>
+              </div>
+
+              <div class="mt-4 pt-2 d-flex space-x-4 gap-3">
+                <input
+                  data-mdb-ripple-init
+                  class="btn btn-primary btn-lg "
+                  type="submit"
+                  value="Thêm"
+                />
+                <input
+                  data-mdb-ripple-init
+                  class="btn btn-secondary btn-lg"
+                  type="button"
+                  value="Hủy"
+                  (click)="handleCancel()"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

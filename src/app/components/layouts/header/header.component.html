@@ -1,0 +1,65 @@
+<header class="bg-custom">
+  <div class="container-fluid d-flex align-items-center justify-content-between px-4" style="height: 100px">
+    <a class="text-teal-600" href="#">
+      <img src="../../../assets/img/logo.png" alt="" class="rounded" style="width: 80px" />
+    </a>
+
+    <div class="d-flex flex-grow-1 align-items-center justify-content-end justify-content-md-between">
+      <nav aria-label="Global" class="d-none d-md-block">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> About </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Shop </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Services </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Projects </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Blog </a>
+          </li>
+        </ul>
+      </nav>
+
+      <form (ngSubmit)="onSearch()" [formGroup]="searchForm" class="d-none d-lg-inline-block w-25">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Tìm kiếm..." formControlName="keywords" />
+          <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+      </form>
+
+      <div class="d-flex align-items-center gap-3" *ngIf="!isLogin">
+        <div class="d-sm-flex gap-2">
+          <button class="button-common log" [routerLink]="['/login']">Đăng nhập </button>
+          <button class="button-common reg" routerLink="register">Đăng ký</button>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-3" *ngIf="!!isLogin">
+        <div class="d-sm-flex gap-2 align-items-center">
+          <div class="text-white cursor-pointer" *ngIf="!!userInfo && userInfo.user.role==='admin'"
+            (click)="handleDashboard()">Về admin |</div>
+          <div class="text-white">Xin chào: {{extractUsername(userInfo.user.email)}}</div>
+          <button class="button-common " (click)="logout()">Đăng xuất</button>
+          <button type="button" class="btn btn-primary position-relative" (click)="cart()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+            </svg>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {{ totalItems }}
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.sidebar {
+  background-color: #343a40;
+}
+.nav-link {
+  color: #fff;
+  transition: background-color 0.2s;
+}
+.nav-link:hover {
+  background-color: #495057;
+}
+.nav-link.active {
+  background-color: #007bff;
+}
+.nav-link svg {
+  margin-right: 8px;
+}

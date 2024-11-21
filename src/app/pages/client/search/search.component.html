@@ -1,0 +1,23 @@
+<!-- search.component.html -->
+<div class="container my-5">
+  <h2>Kết quả tìm kiếm cho "{{ keywords }}"</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let product of products">
+      <div class="card">
+        <img
+          [src]="product.image"
+          class="card-img-top"
+          alt="{{ product.name }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">Giá: {{ product.price }}</p>
+          <p class="card-text">Mô tả: {{ product.desc }}</p>
+          <a [routerLink]="['../detail', product.id]" class="btn btn-primary"
+            >Xem chi tiết</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

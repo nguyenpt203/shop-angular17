@@ -1,0 +1,24 @@
+body {
+  background-color: #508bfc;
+}
+.vh-100 {
+  height: 100vh;
+}
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #2575fc, #6a11cb);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+.form-control {
+  color: white;
+}
+.form-label {
+  color: #adb5bd;
+}
+
+.form-control::placeholder {
+  color: #adb5bd;
+}

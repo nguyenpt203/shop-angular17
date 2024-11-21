@@ -1,0 +1,54 @@
+.star-rating {
+  display: flex;
+  font-size: 24px;
+}
+
+.star {
+  color: #ccc;
+  margin-right: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.star.active {
+  color: #ffcc00;
+}
+
+.star.partial .partial-star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #ffcc00;
+  transition: width 0.3s ease-in-out;
+}
+
+.star.partial .partial-star:after {
+  content: "★";
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* color: #ffcc00; */
+}
+.half-yellow-half-black {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.half-yellow-half-black:before,
+.half-yellow-half-black:after {
+  content: "★";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--rating-fraction);
+  overflow: hidden;
+}
+
+.half-yellow-half-black:before {
+  color: #f1c40f; /* jaune */
+  z-index: 1;
+}

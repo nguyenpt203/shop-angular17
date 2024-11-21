@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+}
+
+#sidebarMenu {
+  background-color: #343a40; /* Màu tối */
+  color: white; /* Chữ màu trắng */
+  height: 100vh; /* Chiều cao 100% của viewport */
+}
+
+#sidebarMenu .nav-link {
+  color: white; /* Chữ màu trắng */
+}
+
+#sidebarMenu .nav-link.active {
+  background-color: #495057; /* Màu nền cho link active */
+}
+
+#sidebarMenu .nav-link svg {
+  stroke: white; /* Màu trắng cho icon */
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.header-icons {
+  width: 24px;
+  height: 24px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.hover-item:hover {
+  background-color: #b2ebf254 !important;
+}
+.active {
+  background-color: #b2ebf254 !important;
+}
+.header {
+  height: 60px;
+}
+.mt-19 {
+  margin-top: 19px;
+}

@@ -1,0 +1,16 @@
+
+.bg-custom {
+    background-color: #243444;
+  }
+  .text-teal-600 {
+    color: #20c997;
+  }
+  .bg-teal-600 {
+    background-color: #20c997;
+  }
+  .hover-bg-teal-700:hover {
+    background-color: #198754;
+  }
+  .hover-text-teal-600:hover {
+    color: #198754;
+  }

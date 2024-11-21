@@ -1,0 +1,49 @@
+<section class="bg-light bg-opacity-25">
+  <div class="d-flex align-items-center justify-content-center px-3 py-4 vh-100">
+    <div class="bg-white rounded-lg shadow-sm border max-w-md bg-opacity-100">
+      <div class="p-4 space-y-4 md:space-y-6 sm:p-5">
+        <h1 class="d-flex align-items-center justify-content-center h2 font-weight-bold text-center text-dark">
+          Đăng ký
+        </h1>
+        <form class="max-w-sm mx-auto" (ngSubmit)="handleSubmit()" [formGroup]="userForm">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control text-black" placeholder="name@example.com" required formControlName="email" />
+            <div class="text-danger" *ngIf="!userForm.get('email')?.valid && userForm.get('email')?.touched">
+              {{ getErrorMessage("email") }}
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input type="password" id="password" class="form-control text-black" placeholder="Password" required formControlName="password" />
+            <div class="text-danger" *ngIf="!userForm.get('password')?.valid && userForm.get('password')?.touched">
+              {{ getErrorMessage("password") }}
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Nhập lại mật khẩu</label>
+            <input type="password" id="confirmPassword" class="form-control text-black" placeholder="Password" required formControlName="confirmPassword" />
+            <div class="text-danger" *ngIf="userForm.hasError('passwordMismatch') && userForm.get('confirmPassword')?.touched">
+              Mật khẩu không trùng khớp!
+            </div>
+          </div>
+          <div class="d-flex align-items-start mb-3">
+            <div class="form-check">
+              <input id="terms" type="checkbox" class="form-check-input" required />
+              <label for="terms" class="form-check-label ms-2">
+                I agree with the <a href="#" class="text-decoration-none text-primary">terms and conditions</a>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Đăng ký</button>
+          <div class="text-danger my-2" *ngIf="loginError">
+            {{ loginError }}
+          </div>
+        </form>
+        <div class="my-2">
+          <a routerLink="/login" class="text-decoration-none text-primary">Đăng nhập</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
